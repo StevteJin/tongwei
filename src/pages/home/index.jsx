@@ -1,17 +1,10 @@
 import React, { Component } from "react";
-import MapLight from '../../components/map_light'
+import MapLight from "../../components/map_light";
 
 import Header from "../header";
 import Footer from "../footer";
 
-
-// import SmartStorage from '../../model/SmartStorage'
-// import SmartSorting from '../../model/SmartSorting'
-// import SmartDistribution from '../../model/SmartDistribution'
-// import SmartDevices from '../../model/SmartDevices'
-// import ResoureMap from '../../views/ResoureMap'
-// import Scrool from '../../views/Scrool'
-// import Faceuing from '../../views/faceYing'
+import Alertbox from "../../views/Alertbox";
 import Commoncontrol from "../../views/Commoncontrol";
 import Dowhat from "../../views/Dowhat";
 import Personnelcontrol from "../../views/Personnelcontrol";
@@ -47,7 +40,6 @@ export default class Homer extends Component {
     });
   }
 
-  
   render() {
     const { choiceIndex, titleModule } = this.state;
     return (
@@ -60,6 +52,7 @@ export default class Homer extends Component {
         <Dowhat />
         <Commoncontrol />
         <Personnelcontrol />
+        <Alertbox />
         <MapLight />
         {/* <Map /> */}
         <div className="conent">{this.ContentHome(choiceIndex)}</div>

@@ -1,0 +1,41 @@
+.alertBox {
+  width: 368px;
+  height: 366px;
+  overflow: hidden;
+  border: 1px solid red;
+  position: absolute;
+  left: 800px;
+  top: 200px;
+  z-index: 100;
+  background-color: yellowgreen;
+  .close {
+    text-align: right;
+    height: 24px;
+    padding-right: 20px;
+  }
+  .title {
+    width: 300px;
+    height: 26px;
+    border: 1px solid blue;
+    margin-left: 20px;
+  }
+  .pointWhat {
+    margin-left: 30px;
+    div {
+      font-size: 14px;
+      margin-top: 6px;
+    }
+  }
+  .snap {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    margin-top: 40px;
+    .snap1 {
+      font-size: 16px;
+    }
+    .snap2 {
+      font-size: 24px;
+    }
+  }
+}
