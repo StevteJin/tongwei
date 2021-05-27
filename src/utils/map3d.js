@@ -19,7 +19,7 @@ export const createMap = {
             view3d.OverLayerRemoveAll();
             createObj = null;
             view3d.OverLayerStopEdit();
-            view3d.SetNorthControl(true, 0, 0, 0.5);
+            // view3d.SetNorthControl(true, 0, 0, 0.5);
             if (callback) {
                 callback();
             }
@@ -70,7 +70,14 @@ export const createMap = {
     // 点击获取坐标值
     getMousePosition(view3d, callback) {
         view3d.SetMousePositionCallback(res => {
-            callback(res)
+            let data = {
+                switchName: 'MousePosition',
+                Personnel: res,
+            }
+            window.parent.postMessage(data, '*');
+            if (callback) {
+                callback(res)
+            }
         });
     },
     //返回初始位置
@@ -154,6 +161,29 @@ export const Model = {
     endEditing(view3d) {
         view3d.OverLayerStopEdit();
     },
+    // 删除圆
+    closeCircle(view3d) {
+        var types = [10302];
+        view3d.OverLayerRemoveAll(types);
+    },
+    // 绘制折线
+    drawLine(view3d,callback) {
+        const obj = {
+            type: 'linestring',
+            color: '#ff0f00',
+            points: []
+        };
+        view3d.OverLayerStartEdit(obj, res => {
+            if (callback) {
+                callback(res);
+            }
+        });
+    },
+    // 删除折线
+    closeLine(view3d) {
+        var types = [10200];
+        view3d.OverLayerRemoveAll(types);
+    },
     //修改坐标
     modify(view3d, locations) {
         if (!createObj) {
@@ -197,7 +227,7 @@ export const Model = {
         }
         // 注意,此功能为异步操作
         view3d.OverLayerCreateObject(obj, res => {
-           // view3d.SetMouseCallback(null);
+            // view3d.SetMouseCallback(null);
             callback(res)
         });
     },
@@ -219,7 +249,7 @@ export const Model = {
             obj["gid"] = strObj.gid;
         }
         view3d.OverLayerCreateObject(obj, res => {
-          //  view3d.SetMouseCallback(null);
+            //  view3d.SetMouseCallback(null);
             if (callback) {
                 callback(res);
             }
@@ -280,10 +310,24 @@ export const Model = {
             points: point
         };
         view3d.OverLayerCreateObject(obj, res => {
-           // view3d.SetMouseCallback(null);
+            // view3d.SetMouseCallback(null);
             createObj = res;
             var strObj = JSON.stringify(createObj);
             callback(strObj)
+        });
+    },
+    // 创建折线
+    createZheLine(view3d, points, callback) {
+        const obj = {
+            type: 'linestring',
+            style: 'red',
+            linewidth: 20.0,
+            points: points
+        };
+        view3d.OverLayerCreateObject(obj, res => {
+            if (callback) {
+                callback(res);
+            }
         });
     },
     // 创建线柱子
@@ -448,13 +492,13 @@ export const Model = {
             path: '',
             speedroute: 10
         };
-   
+
         view3d.SetParameters(paramers);
         view3d.SetMouseCallback(res => {
-    
+
             let data = {}
             console.log(res);
-            console.log(typeof(res))
+            console.log(typeof (res))
             if (res.typename === "model") {
                 data = {
                     switchName: 'model',
@@ -498,11 +542,13 @@ export const Model = {
     },
     // 创建图标
     createIcon(view3d, style) {
+
+
         // 注意,此功能为异步操作
         const obj = {
             type: 'image', // 10102  或  image
             style: style.typeStyle,
-            scale: 2,
+            scale: 3,
             location: {
                 x: style.location.x,
                 y: style.location.y,
@@ -513,7 +559,10 @@ export const Model = {
             }
         };
         view3d.OverLayerCreateObject(obj, res => {
-            console.log(res);
+            // console.log(res);
+            createObj = res;
+            var strObj = JSON.stringify(createObj);
+            console.log(strObj);
         });
     },
     createIconTwo(view3d, style, callback) {
@@ -578,11 +627,23 @@ export const Model = {
         view3d.OverLayerCreateObject(obj, res => {
             paopao.push(res.gid)
         });
+    },
+    // 创建圆
+    creatCircle(view3d, style, callback) {
+        // 注意,此功能为异步操作
+        const obj = {
+            type: 'circle',
+            radius: style.radius ? style.radius : 100, // 半径
+            // style : 'red', 
+            color: style.color ? style.color : '#FF0000',
+            location: style.location
+        };
+        view3d.OverLayerCreateObject(obj, res => {
+            if (callback) {
+                callback(res);
+            }
+        });
     }
-}
-//网格类
-export const grid = {
-
 }
 // 建筑楼层类
 export const Build = {
@@ -621,15 +682,15 @@ export const Build = {
     allShow(view3d, buildVisible) {
         Build.getBuild(view3d, res => {
             JSON.parse(res).forEach(item => {
-              
+
                 console.log(item);
                 view3d.SetBuildingVisible(item.id, buildVisible);
             })
-            view3d._command =100107
+            view3d._command = 100107
             createMap.closeWkWang(view3d)
         })
         //createMap.closeWkWang(view3d)
-       
+
     },
 
 }
@@ -723,6 +784,26 @@ export const Event = {
     // 动画暂停
     stopMan(view3d) {
         view3d.Stop();
+    },
+    // 点线追查
+    pointTracing(view3d, pointPosition) {
+        const json = {
+            radius: 100, // 半径
+            color: '#FF0000',
+            location: pointPosition
+        };
+        Model.creatCircle(view3d, json, msg => {
+            createMap.getMousePosition(view3d)
+        })
+    },
+    pointLineTracing(view3d, pointPosition) {
+
+        // if (pointPosition.length > 1) {
+        //     const points = pointPosition
+        //     Model.createZheLine(view3d, points, msg => {
+        //         createMap.getMousePosition(view3d)
+        //     });
+        // }
     }
 }
 //设置屏幕

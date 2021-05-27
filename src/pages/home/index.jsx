@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import MapLight from '../../components/map_light'
+
 import Header from "../header";
 import Footer from "../footer";
 
@@ -44,6 +46,8 @@ export default class Homer extends Component {
       choiceIndex: key,
     });
   }
+
+  
   render() {
     const { choiceIndex, titleModule } = this.state;
     return (
@@ -56,7 +60,8 @@ export default class Homer extends Component {
         <Dowhat />
         <Commoncontrol />
         <Personnelcontrol />
-        <Map />
+        <MapLight />
+        {/* <Map /> */}
         <div className="conent">{this.ContentHome(choiceIndex)}</div>
         <footer>
           <Footer />

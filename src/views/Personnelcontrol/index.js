@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import "./style.scss";
 class Personnelcontrol extends Component {
   constructor(props) {
@@ -33,26 +33,31 @@ class Personnelcontrol extends Component {
       ],
       whoDo: [
         {
+          dowhat: "陌生人",
           time: "2021-09-09 19:09:32",
           where: "园区西门1门BH19201",
           how: "已处理",
         },
         {
+          dowhat: "非法访客",
           time: "2021-09-09 19:09:32",
           where: "园区西门1门BH19201",
           how: "未处理",
         },
         {
+          dowhat: "非法访客",
           time: "2021-09-09 19:09:32",
           where: "园区西门1门BH19201",
           how: "已处理",
         },
         {
+          dowhat: "非法访客",
           time: "2021-09-09 19:09:32",
           where: "园区西门1门BH19201",
           how: "未处理",
         },
         {
+          dowhat: "陌生人",
           time: "2021-09-09 19:09:32",
           where: "园区西门1门BH19201",
           how: "已处理",
@@ -135,6 +140,7 @@ class Personnelcontrol extends Component {
                     <div key={index} className="whoDo">
                       <div className="tx"></div>
                       <div className="rt">
+                        <div>{item.dowhat}</div>
                         <div>{item.time}</div>
                         <div>{item.where}</div>
                         <div>{item.how}</div>
@@ -151,4 +157,4 @@ class Personnelcontrol extends Component {
   }
 }
 
-export default withRouter(Personnelcontrol) ;
+export default withRouter(Personnelcontrol);

@@ -1,6 +1,10 @@
-#mapv3dContainer_light{
-    height: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
+#mapv3dContainer_light {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rebeccapurple;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #fff;
 }
