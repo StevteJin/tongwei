@@ -1,0 +1,21 @@
+.Controlofgoods{
+   
+    .Left{
+        position: absolute;
+        top: 80px;
+         width: 300px;
+         left: 10px;
+         height: 600px;
+         background-color: yellow;
+       
+    }
+    .Right{
+        position: absolute;
+        right: 10px;
+        width: 300px;
+        background-color: cadetblue;
+        height: 600px;
+        top: 80px;
+        
+    }
+}

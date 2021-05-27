@@ -1,0 +1,35 @@
+.SmartDevices{
+    width: 200px;
+    position: absolute;
+    top: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    button{
+        width: 40px;
+        height: 20px;
+        background: pink;
+        border: none;
+        outline: none;
+    }
+  
+}
+.zhihuui{
+    border: 1px solid red;
+    width: 586px;
+    height: 600px;
+    color: #fff ;
+    position: relative;
+    top: 100px;
+    table{
+      
+        tr{
+            td{
+                color: aqua ;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }  
+}

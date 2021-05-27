@@ -1,0 +1,19 @@
+.footer{
+    position: fixed;
+    bottom: 10px;
+    height: 210px;
+    // background-color: skyblue;
+    left: 10px;
+    right: 0;
+    .echarsone{
+        width: 360px;
+        height: 206px;
+        #r1Echarts_content{
+            left: 0px;
+            width: 360px;
+            height: 206px;
+            background-color: pink;
+        }
+    }
+  
+}

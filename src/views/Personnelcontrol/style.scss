@@ -1,0 +1,89 @@
+.Personnelcontrol {
+  .Left {
+    position: absolute;
+    top: 80px;
+    width: 300px;
+    left: 10px;
+    height: 600px;
+    background-color: skyblue;
+    .peopleCounting {
+      width: 230px;
+      border: 1px solid red;
+      overflow: hidden;
+      margin-left: 35px;
+      margin-top: 10px;
+      .countTitle {
+        font-size: 18px;
+        span {
+          font-size: 14px;
+          cursor: pointer;
+          color: green;
+        }
+      }
+      .inPark {
+        height: 70px;
+        display: flex;
+        .inPng {
+          width: 50px;
+          height: 70px;
+          border: 1px solid blue;
+        }
+        .inCount {
+          margin-left: 20px;
+          .int1 {
+            width: 164px;
+            height: 24px;
+            border: 1px solid blue;
+            line-height: 24px;
+            font-size: 20px;
+          }
+          .int2 {
+            width: 164px;
+            height: 40px;
+            border: 1px solid blue;
+            margin-top: 5px;
+            font-size: 36px;
+          }
+        }
+      }
+      .contName {
+        display: flex;
+        .cn {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .whoDo {
+    .doAny {
+      width: 33.3333%;
+      float: left;
+      margin-top: 10px;
+    }
+  }
+  .point {
+    display: flex;
+    margin-top: 4px;
+    .pointCount {
+      flex: 1;
+    }
+  }
+  .Right {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    background-color: pink;
+    height: 600px;
+    top: 80px;
+    .peopleCounting {
+      width: 230px;
+      border: 1px solid red;
+      overflow: hidden;
+      margin-left: 35px;
+      margin-top: 10px;
+      .countTitle {
+        font-size: 18px;
+      }
+    }
+  }
+}
