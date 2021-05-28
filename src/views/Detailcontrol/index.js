@@ -11,6 +11,10 @@ class Detailcontrol extends Component {
         { number: 2, where: "园区西门1门BH19201TO", count: 178736 },
         { number: 3, where: "园区西门1门BH19201TO", count: 124563 },
         { number: 4, where: "园区西门1门BH19201TO", count: 106543 },
+        { number: 5, where: "园区西门1门BH19201TO", count: 189739 },
+        { number: 6, where: "园区西门1门BH19201TO", count: 178736 },
+        { number: 7, where: "园区西门1门BH19201TO", count: 124563 },
+        { number: 8, where: "园区西门1门BH19201TO", count: 106543 }
       ],
       whoDo: [
         {
@@ -67,7 +71,7 @@ class Detailcontrol extends Component {
                 <div>
                   {whatCount.map((item, index) => {
                     return (
-                      <div key={index}>
+                      <div key={index} className="wherecount">
                         <span>{item.number}</span>
                         <span>{item.where}</span>
                         <span>{item.count}</span>
