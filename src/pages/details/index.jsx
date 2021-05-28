@@ -1,19 +1,11 @@
 import React, { Component } from "react";
 import Header from "../header";
 import Footer from "../footer";
-
-
-// import SmartStorage from '../../model/SmartStorage'
-// import SmartSorting from '../../model/SmartSorting'
-// import SmartDistribution from '../../model/SmartDistribution'
-// import SmartDevices from '../../model/SmartDevices'
-// import ResoureMap from '../../views/ResoureMap'
-// import Scrool from '../../views/Scrool'
-// import Faceuing from '../../views/faceYing'
 import Commoncontrol from "../../views/Commoncontrol";
 import Dowhat from "../../views/Dowhat";
 import Personnelcontrol from "../../views/Personnelcontrol";
 import Controlofgoods from "../../views/Controlofgoods";
+import Detailcontrol from "../../views/Detailcontrol";
 import Map from "../../pages/Map";
 import "./style.scss";
 
@@ -22,7 +14,7 @@ export default class Details extends Component {
     super(props);
     this.state = {
       choiceIndex: 0,
-      titleModule: [{ name: "我是详情" }, { name: "我是详情" }],
+      titleModule: [{ name: "门禁点位统计详情" }],
     };
   }
   // 切换
@@ -44,23 +36,30 @@ export default class Details extends Component {
       choiceIndex: key,
     });
   }
+  goback() {
+    this.props.history.push("/");
+  }
   render() {
     const { choiceIndex, titleModule } = this.state;
     return (
       <div className="homeconent">
+        <div className="goback" onClick={() => this.goback()}>
+          返回首页
+        </div>
         <Header
           PagesSet={(key) => this.SwitchPages(key)}
           titleModule={titleModule}
           choiceIndex={choiceIndex}
         />
-        <Dowhat />
-        <Commoncontrol />
-        <Personnelcontrol />
+        {/* <Dowhat /> */}
+        {/* <Commoncontrol /> */}
+        {/* <Personnelcontrol /> */}
+        <Detailcontrol />
         <Map />
-        <div className="conent">{this.ContentHome(choiceIndex)}</div>
-        <footer>
+        {/* <div className="conent">{this.ContentHome(choiceIndex)}</div> */}
+        {/* <footer>
           <Footer />
-        </footer>
+        </footer> */}
       </div>
     );
   }

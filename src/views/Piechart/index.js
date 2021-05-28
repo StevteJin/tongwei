@@ -82,11 +82,7 @@ class Piechart extends Component {
   render() {
     return (
       <div className="echarstwo">
-        <div
-          className="pieChart"
-          id="showPie"
-          style={{ width: 200, height: 200 }}
-        ></div>
+        <div className="pieChart" id="showPie"></div>
       </div>
     );
   }
