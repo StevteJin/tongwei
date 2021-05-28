@@ -1,0 +1,142 @@
+.Detailcontrol {
+  .topTitle {
+    width: 500px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    z-index: 211;
+    background: green;
+    div {
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+  .Left {
+    position: absolute;
+    top: 80px;
+    width: 300px;
+    left: 10px;
+    height: 600px;
+    background-color: skyblue;
+    z-index: 210;
+    .peopleCounting {
+      width: 230px;
+      border: 1px solid red;
+      overflow: hidden;
+      margin-left: 35px;
+      margin-top: 10px;
+      .countTitle {
+        font-size: 18px;
+        span {
+          font-size: 14px;
+          cursor: pointer;
+          color: green;
+        }
+      }
+      .countName {
+        font-size: 14px;
+        text-align: right;
+        box-sizing: border-box;
+        padding-right: 20px;
+      }
+      .wherecount {
+        display: flex;
+        margin-bottom: 10px;
+        span {
+          flex: 1;
+          font-size: 12px;
+        }
+      }
+      .inPark {
+        height: 70px;
+        display: flex;
+        .inPng {
+          width: 50px;
+          height: 70px;
+          border: 1px solid blue;
+        }
+        .inCount {
+          margin-left: 20px;
+          .int1 {
+            width: 164px;
+            height: 24px;
+            border: 1px solid blue;
+            line-height: 24px;
+            font-size: 20px;
+          }
+          .int2 {
+            width: 164px;
+            height: 40px;
+            border: 1px solid blue;
+            margin-top: 5px;
+            font-size: 36px;
+          }
+        }
+      }
+      .contName {
+        display: flex;
+        .cn {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .whoDo {
+    .doAny {
+      width: 33.3333%;
+      float: left;
+      margin-top: 10px;
+    }
+  }
+  .point {
+    display: flex;
+    margin-top: 4px;
+    .pointCount {
+      flex: 1;
+    }
+  }
+  .Right {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    background-color: pink;
+    height: 600px;
+    top: 80px;
+    z-index: 210;
+    .peopleCounting {
+      width: 230px;
+      border: 1px solid red;
+      overflow: hidden;
+      margin-left: 35px;
+      margin-top: 10px;
+      .countTitle {
+        font-size: 18px;
+      }
+      .whoDo {
+        width: 252px;
+        height: 90px;
+        margin-top: 20px;
+        border: 1px solid blue;
+        .tx {
+          border: 1px solid green;
+          width: 58px;
+          height: 58px;
+          overflow: hidden;
+          float: left;
+          margin-top: 15px;
+        }
+        .rt {
+          float: left;
+          margin-left: 30px;
+          div {
+            height: 20px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
