@@ -7,14 +7,55 @@ class Facecontrol extends Component {
     super(props);
     this.state = {
       whatCount: [
-        { number: 1, where: "园区西门1门BH19201TO", count: 189739 },
-        { number: 2, where: "园区西门1门BH19201TO", count: 178736 },
-        { number: 3, where: "园区西门1门BH19201TO", count: 124563 },
-        { number: 4, where: "园区西门1门BH19201TO", count: 106543 },
-        { number: 5, where: "园区西门1门BH19201TO", count: 189739 },
-        { number: 6, where: "园区西门1门BH19201TO", count: 178736 },
-        { number: 7, where: "园区西门1门BH19201TO", count: 124563 },
-        { number: 8, where: "园区西门1门BH19201TO", count: 106543 },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "1298,32",
+          noWho: "非公司人数",
+          noNum: "190",
+        },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "4298,32",
+          noWho: "非公司人数",
+          noNum: "290",
+        },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "3298,32",
+          noWho: "非公司人数",
+          noNum: "290",
+        },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "5298,32",
+          noWho: "非公司人数",
+          noNum: "490",
+        },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "2298,32",
+          noWho: "非公司人数",
+          noNum: "590",
+        },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "2298,32",
+          noWho: "非公司人数",
+          noNum: "590",
+        },
+        {
+          where: "西街道HB18920NH",
+          isWho: "公司人员数",
+          isNum: "2298,32",
+          noWho: "非公司人数",
+          noNum: "590",
+        },
       ],
       whoDo: [
         {
@@ -65,20 +106,26 @@ class Facecontrol extends Component {
           {/* 这是左边 */}
           <div className="Left">
             <div className="peopleCounting">
-              <div className="countTitle">门禁点位刷脸次数排名</div>
-              <div className="countName">共计（次）45,179</div>
+              <div className="countTitle">点位人脸抓拍统计</div>
               <div>
-                <div>
-                  {whatCount.map((item, index) => {
-                    return (
-                      <div key={index} className="wherecount">
-                        <span>{item.number}</span>
-                        <span>{item.where}</span>
-                        <span>{item.count}</span>
+                {whatCount.map((item, index) => {
+                  return (
+                    <div key={index} className="whatCount">
+                      <div className="portrait"></div>
+                      <div className="rightcontent">
+                        <div>{item.where}</div>
+                        <div>
+                          <span>{item.isWho}</span>
+                          <span>{item.isNum}</span>
+                        </div>
+                        <div>
+                          <span>{item.noWho}</span>
+                          <span>{item.noNum}</span>
+                        </div>
                       </div>
-                    );
-                  })}
-                </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -6,6 +6,7 @@ import Dowhat from "../../views/Dowhat";
 import Personnelcontrol from "../../views/Personnelcontrol";
 import Controlofgoods from "../../views/Controlofgoods";
 import Detailcontrol from "../../views/Detailcontrol";
+import Facecontrol from "../../views/Facecontrol";
 import Map from "../../pages/Map";
 import "./style.scss";
 
@@ -54,7 +55,8 @@ export default class Details extends Component {
         {/* <Dowhat /> */}
         {/* <Commoncontrol /> */}
         {/* <Personnelcontrol /> */}
-        <Detailcontrol />
+        {/* <Detailcontrol /> */}
+        <Facecontrol />
         <Map />
         {/* <div className="conent">{this.ContentHome(choiceIndex)}</div> */}
         {/* <footer>

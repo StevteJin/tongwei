@@ -1,4 +1,4 @@
-.Detailcontrol {
+.Facecontrol {
   .topTitle {
     width: 500px;
     height: 36px;
@@ -28,6 +28,22 @@
       overflow: hidden;
       margin-left: 35px;
       margin-top: 10px;
+      .whatCount {
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .portrait {
+          float: left;
+          width: 42px;
+          height: 42px;
+          background-color: royalblue;
+          margin-right: 30px;
+        }
+        .rightcontent {
+          float: left;
+          font-size: 12px;
+        }
+      }
       .countTitle {
         font-size: 18px;
         span {
