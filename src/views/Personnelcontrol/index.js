@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { withRouter } from "react-router-dom";
-import Piechart from "../../views/Piechart";
+// import Piechart from "../../views/Piechart";
 import "./style.scss";
 class Personnelcontrol extends Component {
   constructor(props) {
@@ -127,9 +127,6 @@ class Personnelcontrol extends Component {
                   <div>门禁点刷脸次数</div>
                   <div>248575</div>
                 </div>
-              </div>
-              <div>
-                <Piechart />
               </div>
             </div>
           </div>

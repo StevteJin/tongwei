@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/echarts": "^4.9.7",
     "jquery": "^3.6.0"
   }
 }

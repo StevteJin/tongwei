@@ -9,7 +9,7 @@ import Commoncontrol from "../../views/Commoncontrol";
 import Dowhat from "../../views/Dowhat";
 import Personnelcontrol from "../../views/Personnelcontrol";
 import Controlofgoods from "../../views/Controlofgoods";
-import Map from "../../pages/Map";
+import Piechart from "../../views/Piechart";
 import "./style.scss";
 
 export default class Homer extends Component {
@@ -52,7 +52,9 @@ export default class Homer extends Component {
         <Dowhat />
         <Commoncontrol />
         <Personnelcontrol />
+        <Piechart />
         <Alertbox />
+        
         <MapLight />
         {/* <Map /> */}
         <div className="conent">{this.ContentHome(choiceIndex)}</div>

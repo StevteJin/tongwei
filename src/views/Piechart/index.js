@@ -1,30 +1,30 @@
 //饼图
 import React, { Component } from "react";
-import * as echarts from "echarts/lib/echarts";
-import "echarts/lib/chart/pie"; //饼状图
-import "echarts/lib/component/tooltip";
-import "echarts/lib/component/title";
-import "echarts/lib/component/legend";
-import "echarts/lib/component/markPoint";
+import * as echarts from "echarts";
+
 import "./style.scss";
 class Piechart extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      ref: null,
+      chart: null,
+    };
   }
   componentDidMount() {
     this.getEchartsYuan();
   }
   getEchartsYuan() {
     //环形图百分比
-    let huan_val = document.getElementsByClassName("pieChart")[0];
-    // console.log("我是饼图对象", huan_val);
-    let chart = echarts.init(huan_val);
+    let chartDom = document.getElementById("showPie");
+    let myChart = echarts.init(chartDom);
+    console.log("二级图", myChart);
+    let ceshi = "存在的不";
     let option = {
       color: ["#f8e367", "#99dfff", "#58c0f0", "#5ea6ff", "#ff9e48", "#bcbcbc"],
       series: [
         {
-          name: "门岗刷脸",
+          name: "驾驶分析",
           type: "pie",
           radius: ["60%", "80%"],
           avoidLabelOverlap: false,
@@ -75,10 +75,20 @@ class Piechart extends Component {
         },
       ],
     };
-    chart.setOption(option);
+    console.log("参数", ceshi, option);
+    option && myChart.setOption(option);
+    console.log("我是最终的图", myChart);
   }
   render() {
-    return <div className="pieChart"></div>;
+    return (
+      <div className="echarstwo">
+        <div
+          className="pieChart"
+          id="showPie"
+          style={{ width: 200, height: 200 }}
+        ></div>
+      </div>
+    );
   }
 }
 
