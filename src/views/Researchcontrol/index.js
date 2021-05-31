@@ -24,7 +24,7 @@ class Researchcontrol extends Component {
           biaohao: "2128837478299",
           where: "园区西门1门BH19201",
           time: "2021-09-09 19:09:32",
-        }
+        },
       ],
     };
   }
@@ -73,7 +73,34 @@ class Researchcontrol extends Component {
             </div>
           </div>
           {/* 这是右边 */}
-          <div className="Right"></div>
+          <div className="Right">
+            <div>
+              <span>人员轨迹</span>
+              <span>X</span>
+            </div>
+            <div>
+              <div></div>
+              <div>
+                <div>张敏（123456）</div>
+                <div>334354656565</div>
+                <div>园区西门1门787738</div>
+              </div>
+              <div>
+                <span>1天</span>
+                <span>3个点位</span>
+                <span>3条记录</span>
+              </div>
+              <div>2021-04-21 07:09:09 至 2021-05-21 07:09:09</div>
+              <div>
+                <div></div>
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div></div>
+              </div>
+            </div>
+          </div>
         </div>
       </Fragment>
     );
