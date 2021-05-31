@@ -7,6 +7,8 @@ import Homer from "./pages/home/index";
 import Details from "./pages/details/index";
 //点位抓拍统计详情
 import Facedetail from "./pages/facedetail/index";
+//人员轨迹查询
+import Researcherstrack from "./pages/Researcherstrack/index";
 
 export default class Main extends Component {
   render() {
@@ -16,6 +18,7 @@ export default class Main extends Component {
         <Route path="/" exact component={Homer}></Route>
         <Route path="/details" exact component={Details}></Route>
         <Route path="/facedetail" exact component={Facedetail}></Route>
+        <Route path="/Researcherstrack" exact component={Researcherstrack}></Route>
       </HashRouter>
     );
   }

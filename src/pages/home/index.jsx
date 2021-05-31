@@ -56,7 +56,7 @@ export default class Homer extends Component {
         <div className="btnbox">
           <div onClick={() => this.gowhere("/details")}>门禁点位统计详情</div>
           <div onClick={() => this.gowhere("/facedetail")}>点位抓拍统计详情</div>
-          <div>人员轨迹查询</div>
+          <div onClick={() => this.gowhere("/Researcherstrack")}>人员轨迹查询</div>
           <div>人员预警</div>
           <div>热力图</div>
           <div>出入口车辆信息统计详情</div>
