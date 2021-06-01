@@ -9,6 +9,8 @@ import Details from "./pages/details/index";
 import Facedetail from "./pages/facedetail/index";
 //人员轨迹查询
 import Researcherstrack from "./pages/Researcherstrack/index";
+//出入口车辆信息统计详情
+import Cardetail from "./pages/Cardetail/index";
 
 export default class Main extends Component {
   render() {
@@ -18,7 +20,12 @@ export default class Main extends Component {
         <Route path="/" exact component={Homer}></Route>
         <Route path="/details" exact component={Details}></Route>
         <Route path="/facedetail" exact component={Facedetail}></Route>
-        <Route path="/Researcherstrack" exact component={Researcherstrack}></Route>
+        <Route
+          path="/Researcherstrack"
+          exact
+          component={Researcherstrack}
+        ></Route>
+        <Route path="/cardetail" exact component={Cardetail}></Route>
       </HashRouter>
     );
   }

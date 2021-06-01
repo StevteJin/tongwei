@@ -73,7 +73,9 @@ export default class Homer extends Component {
             </div>
           ) : (
             <div>
-              <div>出入口车辆信息统计详情</div>
+              <div onClick={() => this.gowhere("/cardetail")}>
+                出入口车辆信息统计详情
+              </div>
               <div>视频设备信息统计详情</div>
               <div>车辆轨迹查询</div>
               <div>车辆预警</div>
