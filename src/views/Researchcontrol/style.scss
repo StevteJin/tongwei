@@ -191,13 +191,84 @@
     top: 80px;
     z-index: 210;
     .peopleCounting {
-      width: 230px;
+      width: 260px;
       border: 1px solid red;
       overflow: hidden;
-      margin-left: 35px;
+      margin-left: 15px;
       margin-top: 10px;
       .countTitle {
         font-size: 18px;
+      }
+      .righttop {
+        span {
+          font-size: 18px;
+        }
+        .spanleft {
+          float: left;
+        }
+        .spanright {
+          float: right;
+        }
+        overflow: hidden;
+      }
+      .rightbottom {
+        .headbox {
+          overflow: hidden;
+          font-size: 12px;
+          .headpng {
+            border: 1px solid blue;
+            width: 68px;
+            height: 68px;
+            overflow: hidden;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          .headright {
+            float: left;
+          }
+          border-bottom: 1px solid green;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+        }
+        .rightcenter {
+          font-size: 12px;
+          .centertop {
+            display: flex;
+            span {
+              flex: 1;
+              border-right: 1px solid green;
+              text-align: center;
+            }
+            margin-bottom: 10px;
+          }
+          .centerbottom {
+          }
+        }
+        .rightbottom {
+          .msgbottom {
+            .msgbox {
+              overflow: hidden;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              .msg1 {
+                float: left;
+                margin-left: 10px;
+                margin-right: 10px;
+              }
+              .msg2 {
+                float: left;
+              }
+              .msg3 {
+                float: right;
+                width: 48px;
+                height: 48px;
+                border: 1px solid blue;
+              }
+            }
+          }
+        }
       }
       .whoDo {
         width: 252px;

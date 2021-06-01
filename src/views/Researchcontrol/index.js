@@ -26,13 +26,18 @@ class Researchcontrol extends Component {
           time: "2021-09-09 19:09:32",
         },
       ],
+      centerdata: [
+        { state: "终", time: "10:20:45", where: "杭州北部软件园" },
+        { state: "起", time: "10:20:45", where: "杭州东部软件园" },
+        { state: "起", time: "10:20:45", where: "杭州北部软件园" },
+      ],
     };
   }
   jump() {
     this.props.history.push("/Faces");
   }
   render() {
-    const { whatCount, whoDo } = this.state;
+    const { whatCount, centerdata } = this.state;
     return (
       <Fragment>
         <div className="Facecontrol">
@@ -74,30 +79,46 @@ class Researchcontrol extends Component {
           </div>
           {/* 这是右边 */}
           <div className="Right">
-            <div>
-              <span>人员轨迹</span>
-              <span>X</span>
-            </div>
-            <div>
-              <div></div>
-              <div>
-                <div>张敏（123456）</div>
-                <div>334354656565</div>
-                <div>园区西门1门787738</div>
+            <div className="peopleCounting">
+              <div className="righttop">
+                <span className="spanleft">人员轨迹</span>
+                <span className="spanright">X</span>
               </div>
-              <div>
-                <span>1天</span>
-                <span>3个点位</span>
-                <span>3条记录</span>
-              </div>
-              <div>2021-04-21 07:09:09 至 2021-05-21 07:09:09</div>
-              <div>
-                <div></div>
-                <div>
-                  <div></div>
-                  <div></div>
+              <div className="rightbottom">
+                <div className="headbox">
+                  <div className="headpng"></div>
+                  <div className="headright">
+                    <div>张敏（123456）</div>
+                    <div>334354656565</div>
+                    <div>园区西门1门787738</div>
+                  </div>
                 </div>
-                <div></div>
+                <div className="rightcenter">
+                  <div className="centertop">
+                    <span>1天</span>
+                    <span>3个点位</span>
+                    <span>3条记录</span>
+                  </div>
+                  <div className="centerbottom">
+                    2021-04-21 07:09:09 至 2021-05-21 07:09:09
+                  </div>
+                </div>
+                <div className="rightbottom">
+                  <div className="msgbottom">
+                    {centerdata.map((item, index) => {
+                      return (
+                        <div key={index} className="msgbox">
+                          <div className="msg1">{item.state}</div>
+                          <div className="msg2">
+                            <div>{item.time}</div>
+                            <div>{item.where}</div>
+                          </div>
+                          <div className="msg3"></div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
