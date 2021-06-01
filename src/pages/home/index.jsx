@@ -5,6 +5,7 @@ import Header from "../header";
 import Footer from "../footer";
 
 import Alertbox from "../../views/Alertbox";
+import Bounced from "../../views/Bounced";
 import Commoncontrol from "../../views/Commoncontrol";
 import Dowhat from "../../views/Dowhat";
 import Personnelcontrol from "../../views/Personnelcontrol";
@@ -55,9 +56,13 @@ export default class Homer extends Component {
         <Commoncontrol />
         <div className="btnbox">
           <div onClick={() => this.gowhere("/details")}>门禁点位统计详情</div>
-          <div onClick={() => this.gowhere("/facedetail")}>点位抓拍统计详情</div>
-          <div onClick={() => this.gowhere("/Researcherstrack")}>人员轨迹查询</div>
-          <div>人员预警</div>
+          <div onClick={() => this.gowhere("/facedetail")}>
+            点位抓拍统计详情
+          </div>
+          <div onClick={() => this.gowhere("/Researcherstrack")}>
+            人员轨迹查询
+          </div>
+          <div onClick={() => this.gowhere("/")}>人员预警</div>
           <div>热力图</div>
           <div>出入口车辆信息统计详情</div>
           <div>视频设备信息统计详情</div>
@@ -69,7 +74,7 @@ export default class Homer extends Component {
         <Personnelcontrol />
         <Piechart />
         <Alertbox />
-
+        <Bounced />
         <MapLight />
         {/* <Map /> */}
         <div className="conent">{this.ContentHome(choiceIndex)}</div>

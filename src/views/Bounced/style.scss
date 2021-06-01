@@ -1,0 +1,47 @@
+.bounced {
+  width: 368px;
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid red;
+  position: absolute;
+  left: 1100px;
+  top: 200px;
+  z-index: 100;
+  background-color: rosybrown;
+  .close {
+    text-align: right;
+    height: 24px;
+    padding-right: 20px;
+  }
+  .title {
+    width: 300px;
+    height: 26px;
+    border: 1px solid blue;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .imgbox {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    .topimg {
+      span {
+        border: 1px solid green;
+      }
+    }
+    .bottomimg {
+      border: 1px solid red;
+      height: 170px;
+    }
+    .imgtime {
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .imgwhere {
+      font-size: 12px;
+      border-bottom: 1px solid red;
+      padding-bottom: 10px;
+    }
+  }
+}
