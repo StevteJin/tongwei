@@ -41,7 +41,9 @@ class Commoncontrol extends Component {
       ],
     };
   }
-  checkChange = (e, index) => {};
+  onChange(checkedValues) {
+    console.log("checked = ", checkedValues);
+  }
   render() {
     const { choiceName } = this.state;
     return (
@@ -50,12 +52,7 @@ class Commoncontrol extends Component {
           {choiceName.map((item, index) => {
             return (
               <li key={index}>
-                <Checkbox
-                  checked={item.key}
-                  onChange={(e) => this.checkChange(e, index)}
-                >
-                  {item.value}
-                </Checkbox>
+                <Checkbox onChange={this.onChange}>{item.value}</Checkbox>
               </li>
             );
           })}
