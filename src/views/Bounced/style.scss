@@ -44,4 +44,33 @@
       padding-bottom: 10px;
     }
   }
+  .radiobox {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .radioleft {
+      float: left;
+    }
+    .radioright {
+      float: left;
+      margin-left: 30px;
+      border: 1px solid blue;
+      width: 130px;
+    }
+  }
+  .lastbox {
+    margin-left: 20px;
+    margin-right: 20px;
+    .lastleft {
+      border: 1px solid red;
+      width: 240px;
+      display: inline-block;
+    }
+    .lastright {
+      border: 1px solid blue;
+      display: inline-block;
+      width:60px;
+      margin-left:10px;
+    }
+  }
 }
