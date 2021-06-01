@@ -1,21 +1,132 @@
-.Controlofgoods{
-   
-    .Left{
-        position: absolute;
-        top: 80px;
-         width: 300px;
-         left: 10px;
-         height: 600px;
-         background-color: yellow;
-       
+.Controlofgoods {
+  .Left {
+    position: absolute;
+    top: 80px;
+    width: 300px;
+    left: 10px;
+    height: 690px;
+    background-color: rosybrown;
+    .carname {
+      height: 38px;
+      line-height: 38px;
+      font-size: 16px;
+      margin-left: 20px;
+      margin-right: 20px;
+      border: 1px solid blue;
+      span {
+        display: inline-block;
+        margin-right: 20px;
+      }
     }
-    .Right{
-        position: absolute;
-        right: 10px;
-        width: 300px;
-        background-color: cadetblue;
-        height: 600px;
-        top: 80px;
-        
+    .parkbox {
+      height: 90px;
+      margin-top: 10px;
+      .parkimg {
+        border: 1px solid yellowgreen;
+        overflow: hidden;
+        width: 60px;
+        height: 80px;
+        margin-left: 20px;
+        margin-right: 10px;
+        float: left;
+      }
+      .parkcontent {
+        float: left;
+        .parkone {
+        }
+        .parktwo {
+          font-size: 30px;
+        }
+      }
     }
+    .parkmsg {
+      .parkcase {
+        .casename {
+          font-size: 12px;
+          height: 17px;
+          background: lightblue;
+          line-height: 17px;
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-left: 20px;
+        }
+        .casemsg {
+          height: 60px;
+          overflow: hidden;
+          margin-left: 20px;
+          margin-right: 20px;
+          .casenumber {
+            float: left;
+          }
+          .caseimg {
+            float: right;
+            width: 40px;
+            height: 40px;
+            border: 1px solid green;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .Right {
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    background-color: cadetblue;
+    height: 600px;
+    top: 80px;
+    .carname {
+      height: 38px;
+      line-height: 38px;
+      font-size: 16px;
+      margin-left: 20px;
+      margin-right: 20px;
+      border: 1px solid blue;
+      span {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+    .carmsg {
+      overflow: hidden;
+      margin-left: 10px;
+      margin-right: 10px;
+      .carbox {
+        float: left;
+        width: 49%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    .carcase {
+      .caseindex {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .casetop {
+          display: flex;
+          span {
+            flex: 1;
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+        .casebottom {
+          overflow: hidden;
+          .caseimg {
+            width: 58px;
+            height: 58px;
+            border: 1px solid blue;
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .casemsg {
+            float: left;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
 }
