@@ -6,6 +6,7 @@ import Dowhat from "../../views/Dowhat";
 import Personnelcontrol from "../../views/Personnelcontrol";
 import Controlofgoods from "../../views/Controlofgoods";
 import Detailcontrol from "../../views/Detailcontrol";
+import Cardetailcontrol from "../../views/Cardetailcontrol";
 import Map from "../../pages/Map";
 import "./style.scss";
 
@@ -54,7 +55,7 @@ export default class Cardetail extends Component {
         {/* <Dowhat /> */}
         {/* <Commoncontrol /> */}
         {/* <Personnelcontrol /> */}
-        <Detailcontrol />
+        <Cardetailcontrol />
         <Map />
         {/* <div className="conent">{this.ContentHome(choiceIndex)}</div> */}
         {/* <footer>
