@@ -11,6 +11,8 @@ import Facedetail from "./pages/facedetail/index";
 import Researcherstrack from "./pages/Researcherstrack/index";
 //出入口车辆信息统计详情
 import Cardetail from "./pages/Cardetail/index";
+//视频设备信息统计详情
+import Videomsg from "./pages/videomsg/index";
 
 export default class Main extends Component {
   render() {
@@ -26,6 +28,7 @@ export default class Main extends Component {
           component={Researcherstrack}
         ></Route>
         <Route path="/cardetail" exact component={Cardetail}></Route>
+        <Route path="/videomsg" exact component={Videomsg}></Route>
       </HashRouter>
     );
   }
